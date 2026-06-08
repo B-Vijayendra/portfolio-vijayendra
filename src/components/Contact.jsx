@@ -8,14 +8,13 @@ const Contact = () => {
   const onSubmit = async (event) => {
   event.preventDefault();
   setLoading(true);
-{/*import.meta.env.VITE_WEB3FORMS_ACCESS_KEY*/}
+
   try {
     const formData = new FormData(event.target);
 
 formData.append(
   "access_key",
-  
-  "5684da97-be51-4c17-aabd-992030ce36ad"
+  import.meta.env.VITE_WEB3FORMS_ACCESS_KEY
 );
 
     const response = await fetch(
