@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* * Portfolio Website * Developed by Vijayendra Bylupati * © 2026 All Rights Reserved */
+.shooting-star {
+  position: absolute;
+  top: 45%;
+  left: -100px;
+  width: 70px;
+  height: 70px;
+  fill: #22d3ee;
+
+  filter:
+    drop-shadow(0 0 12px #22d3ee)
+    drop-shadow(0 0 25px #22d3ee);
+
+  animation: shootStar 2.5s ease-in-out forwards;
+}
+
+.shooting-trail {
+  position: absolute;
+  top: calc(45% + 32px);
+  left: -300px;
+
+  width: 300px;
+  height: 4px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(34, 211, 238, 0.8),
+    rgba(34, 211, 238, 1)
+  );
+
+  filter: blur(3px);
+
+  animation: shootTrail 2.5s ease-in-out forwards;
+}
+
+@keyframes shootStar {
+  0% {
+    left: -100px;
+    transform: rotate(-180deg) scale(0.5);
+  }
+
+  40% {
+    left: 45%;
+    transform: rotate(0deg) scale(1.2);
+  }
+
+  100% {
+    left: 110%;
+    transform: rotate(180deg) scale(0.8);
+  }
+}
+
+@keyframes shootTrail {
+  0% {
+    left: -300px;
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 110%;
+    opacity: 0;
+  }
+}
