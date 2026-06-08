@@ -44,7 +44,7 @@ formData.append(
     setLoading(false);
   }
 };
-/* * Portfolio Website * Developed by Vijayendra Bylupati * © 2026 All Rights Reserved */
+{/*  Portfolio Website * Developed by Vijayendra Bylupati * © 2026 All Rights Reserved */}
   return (
     <section id="contact" className="py-24 px-6">
       <div className="max-w-4xl mx-auto glass rounded-[40px]     backdrop-blur-md
