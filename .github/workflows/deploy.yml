@@ -22,7 +22,10 @@ jobs:
 
       - run: npm install
 
+      # We added the env block here so Vite can find your secret key during build time
       - run: npm run build
+        env:
+          VITE_WEB3FORMS_ACCESS_KEY: ${{ secrets.VITE_WEB3FORMS_ACCESS_KEY }}
 
       - uses: actions/upload-pages-artifact@v3
         with:
